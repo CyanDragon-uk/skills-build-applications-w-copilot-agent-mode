@@ -77,9 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'octofit_db',
-        'ENFORCE_SCHEMA': False,  # Optional: Add this if schema enforcement is not required
         'CLIENT': {
-            'host': 'localhost',
+            'host': '127.0.0.1',
             'port': 27017,
         },
     }
