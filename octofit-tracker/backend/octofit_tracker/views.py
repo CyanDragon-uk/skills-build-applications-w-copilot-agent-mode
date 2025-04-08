@@ -1,6 +1,10 @@
 from rest_framework import viewsets
+from django.http import JsonResponse
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from .models import User, Team, Activity, Leaderboard, Workout
+
+def api_root(request):
+    return JsonResponse({"url": "https://symmetrical-palm-tree-qxqq4qqv9rxc4xjp-8000.app.github.dev"})
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
