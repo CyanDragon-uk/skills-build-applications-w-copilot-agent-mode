@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-8&*#+d4b)o-z@j&3(7yo=9ob7*$r=06gsivs5&8aaa3@#@-l#9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,6 +81,23 @@ DATABASES = {
         'PORT': 27017,
     }
 }
+
+
+# Enable CORS for all origins, methods, and headers
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'x-csrftoken',
+]
 
 
 # Password validation
